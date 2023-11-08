@@ -1,0 +1,135 @@
+
+@media screen and (max-width: 400px) {
+
+    div.cont-projet .activ {
+    transform: translateX(60px);
+    }
+    div.cont-projet .activ2 {
+      transform: translateX(-60px);
+    }
+      
+   
+    .projet {
+      height: 280px;
+      width: 200px;
+      background-color: #030027;
+      border-radius: 10px;
+      transition: 0.4s ease-out;
+      left: 0px;
+      box-shadow: 3px 2px 50px rgb(202, 245, 255);
+      margin-bottom: -5vh;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+  
+    }
+  }
+  
+  /* *****projet img************ */
+  /* *****Images a changer pour chaque projet************ */
+  #projet1 {
+      background-image: url(img/_LogoTIM.png);
+      background-size: cover;
+    }
+    
+    #projet2 {
+      background-image: url(img/_LogoTIM.png);
+      background-size: cover;
+    }
+    
+    #projet3 {
+      background-image: url(img/_LogoTIM.png);
+      background-size: cover;
+    }
+    
+    #projet4 {
+      background-image: url(img/_LogoTIM.png);
+      background-size: cover;
+    }
+    
+    #projet5 {
+      background-image: url(img/_LogoTIM.png);
+      background-size: cover;
+    }
+    
+    /* *****project container and divs************ */
+    div.cont-projet {
+      display: grid;
+      justify-content: center;
+      background-color: rgb(196, 231, 212);
+      width: -webkit-fill-available;
+      overflow: scroll;
+      padding: 5%;
+    }
+    
+  
+    
+    .projet:hover {
+      transform: scale(105%);
+      transition: 0.4s ease-out;
+    }
+    
+    .projet:hover ~ .projet {
+      position: relative;
+      transition: 0.4s ease-out;
+    }
+    
+    /* The actual projet (div) */
+    .projet .texteProjet {
+      visibility: hidden;
+      width: 120px;
+      color: #030027;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 30%;
+      left: -70%;
+    }
+    
+    .projet .texteProjet2 {
+      visibility: hidden;
+      width: 120px;
+      color: #030027;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 30%;
+      right: -70%;
+    }
+    
+    /* Toggle this class - hide and show the projet */
+    .projet .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+    
+    /* Add animation (fade in the projet) */
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .title {
+      color: #C4E7D4;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 300;
+      position: absolute;
+      left: 20px;
+      top: 15px;
+    }
+  
+  
