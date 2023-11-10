@@ -3,9 +3,9 @@
 /*
     Plugin name: Afficher-Projet
     Author: Lada Starodubtseva
-    Plugin uri:
+    Plugin url:
     Version: 1.0.0
-    Description: Permet d'afficher les Projet du TIM selon les sessions
+    Description: Permet d'afficher les Projet des etudiants
 */
  
  
@@ -20,11 +20,11 @@ function Projet_enqueue()
 // wp_enqueue_scripts // le hook
  
  
-$version_css = filemtime(plugin_dir_path( __FILE__ ) . "Projet.css");
+$version_css = filemtime(plugin_dir_path( __FILE__ ) . "Projet.scss");
 $version_js = filemtime(plugin_dir_path(__FILE__) . "Projet.js");
  
-    wp_enqueue_style(   'em_plugin_Projet_css',
-                     plugin_dir_url(__FILE__) . "Projet.css",
+    wp_enqueue_style(   'em_plugin_Projet_scss',
+                     plugin_dir_url(__FILE__) . "Projet.scss",
                      array(),
                      $version_css);
  
@@ -52,15 +52,15 @@ function creation_Projet(){
                             <div class="five">
 
 
-                                <div class="container">
+                                <div class="premier-container-projet">
 
-                                    <div class="cont-projet">
+                                    <div class="cont-projet  disbaleZindex" id="cont-projet">
                                         <div id="projet1" class="projet" onclick="showText() , moveDiv1back()" >
                                     
                                             <h3 class="title">projet 1</h3>
                                             <img src="img/_LogoTIM.png" alt="">
 
-                                            <p id="projText" class="texteProjet">
+                                            <p id="projText" class="texteProjet ">
                                                 Lorem, ipsum dolor sit 
                                                 amet consectetur adipisicing 
                                                 elit. Nobis enim blanditiis 
@@ -76,7 +76,7 @@ function creation_Projet(){
                                             <h3 class="title">projet 2</h3>
                                             <img src="" alt="">
 
-                                            <p id="projText2" class="texteProjet2">
+                                            <p id="projText2" class="texteProjet2 ">
                                                 Lorem, ipsum dolor sit 
                                                 amet consectetur adipisicing 
                                                 elit. Nobis enim blanditiis 
@@ -92,7 +92,7 @@ function creation_Projet(){
                                             <h3 class="title">projet 3</h3>
                                             <img src="" alt="">
 
-                                            <p id="projText3" class="texteProjet">
+                                            <p id="projText3" class="texteProjet3 ">
                                                 Lorem, ipsum dolor sit 
                                                 amet consectetur adipisicing 
                                                 elit. Nobis enim blanditiis 
@@ -108,7 +108,7 @@ function creation_Projet(){
                                             <h3 class="title">projet 4</h3>
                                             <img src="" alt="">
 
-                                            <p id="projText4" class="texteProjet2">
+                                            <p id="projText4" class="texteProjet4 ">
                                                 Lorem, ipsum dolor sit 
                                                 amet consectetur adipisicing 
                                                 elit. Nobis enim blanditiis 
@@ -123,7 +123,7 @@ function creation_Projet(){
                                             <h3 class="title">projet 5</h3>
                                             <img src="" alt="">
 
-                                            <p id="projText5" class="texteProjet">
+                                            <p id="projText5" class="texteProjet5 ">
                                                 Lorem, ipsum dolor sit 
                                                 amet consectetur adipisicing 
                                                 elit. Nobis enim blanditiis 
