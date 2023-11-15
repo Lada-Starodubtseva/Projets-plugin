@@ -20,11 +20,11 @@ function Projet_enqueue()
 // wp_enqueue_scripts // le hook
  
  
-$version_css = filemtime(plugin_dir_path( __FILE__ ) . "Projet.scss");
+$version_css = filemtime(plugin_dir_path( __FILE__ ) . "Projet.css");
 $version_js = filemtime(plugin_dir_path(__FILE__) . "Projet.js");
  
     wp_enqueue_style(   'em_plugin_Projet_scss',
-                     plugin_dir_url(__FILE__) . "Projet.scss",
+                     plugin_dir_url(__FILE__) . "Projet.css",
                      array(),
                      $version_css);
  
@@ -45,11 +45,8 @@ function creation_Projet(){
     <title>Pojets des eleves</title>
     <div id="background-deux"></div>
        
-    <div class="one">
-                <div class="two">
-                    <div class="three">
-                        <div class="four">
-                            <div class="five">
+
+            
 
 
                                 <div class="premier-container-projet">
@@ -138,11 +135,7 @@ function creation_Projet(){
 
                                 </div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          
     </section>';
     return $contenu;
 }
