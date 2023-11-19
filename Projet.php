@@ -52,24 +52,21 @@ function creation_Projet(){
                             <div id="projet1" class="projet" onclick="showText() , moveDiv1back()" >
                         
 
-                                <h3 class="title">projet 1</h3>
-                                <img src="http://localhost:8080/5w5/wp-content/uploads/2023/10/LogoTIM-1.png" alt="">
+                                <h3 class="title"></h3>
+                                <img src="" alt="">
 
                                 <p id="projText" class="texteProjet ">
-                                    Lorem, ipsum dolor sit 
-                                    amet consectetur adipisicing 
-                                    elit. Nobis enim blanditiis 
-                                    est quam, porro, animi repellendus 
-                                    veniam libero, quas officia 
-                                    architecto similique! Ab voluptates 
-                                    laboriosam quibusdam tenetur aut dolor 
-                                    pariatur?
+                                    Les Chroniques Dystopiques
+                                    <br> Projet réalisé au cours de jeux en équipe 
+                                    <br> Par Nicolas Carrière, Vincent Lagarde  
+                                    <br> Antoine Chambelant et ... 
+                                    
                                 </p>
                             </div>
 
                             <div id="projet2" class="projet" onclick="showText2() , moveDiv2back()" >
-                                <h3 class="title">projet 2</h3>
-                                <img src="http://localhost:8080/5w5/wp-content/uploads/2023/10/LogoTIM-1.png" alt="">
+                                <h3 class="title"></h3>
+                                <img src="" alt="">
 
                                 <p id="projText2" class="texteProjet2 ">
                                     Lorem, ipsum dolor sit 
@@ -84,8 +81,8 @@ function creation_Projet(){
                             </div>
 
                             <div id="projet3"  class="projet" onclick="showText3() ,moveDiv3back()" >
-                                <h3 class="title">projet 3</h3>
-                                <img src="http://localhost:8080/5w5/wp-content/uploads/2023/10/LogoTIM-1.png" alt="">
+                                <h3 class="title"></h3>
+                                <img src=""alt="">
 
                                 <p id="projText3" class="texteProjet3 ">
                                     Lorem, ipsum dolor sit 
@@ -100,8 +97,8 @@ function creation_Projet(){
                             </div>
 
                             <div id="projet4" class="projet" onclick="showText4() , moveDiv4back()" >
-                                <h3 class="title">projet 4</h3>
-                                <img src="http://localhost:8080/5w5/wp-content/uploads/2023/10/LogoTIM-1.png" alt="">
+                                <h3 class="title"></h3>
+                                <img src="" alt="">
 
                                 <p id="projText4" class="texteProjet4 ">
                                     Lorem, ipsum dolor sit 
@@ -115,8 +112,8 @@ function creation_Projet(){
                                 </p>
                             </div>
                             <div id="projet5" class="projet" onclick="showText5() , moveDiv5back()" >
-                                <h3 class="title">projet 5</h3>
-                                <img src="http://localhost:8080/5w5/wp-content/uploads/2023/10/LogoTIM-1.png" alt="">
+                                <h3 class="</h3>
+                                <img src="" alt="">
 
                                 <p id="projText5" class="texteProjet5 ">
                                     Lorem, ipsum dolor sit 
