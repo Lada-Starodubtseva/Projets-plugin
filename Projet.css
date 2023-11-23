@@ -38,6 +38,20 @@
 
 @media screen and (max-width: 700px) {
 
+  .titleProjetDroite{
+    visibility: hidden;
+    color: #c4e7d4;
+    font-size: 20px;
+    left: -100%;
+    position: relative;
+  }
+  .titleProjetGauche{
+    visibility: hidden;
+    color: #c4e7d4;
+    font-size: 20px;
+    right: -120%;
+    position: relative;
+  }
 
   h1.titleProjets {
     font-family: 'Martian Mono', monospace;
@@ -68,6 +82,7 @@
       cursor: pointer;
   
     }
+ 
     
      div.cont-projet {
         display: grid;
@@ -84,419 +99,219 @@
       /* The actual projet (div) */
       .projet .texteProjet, .texteProjet3, .texteProjet5 {
         visibility: hidden;
-        width: 120px;
+        width: 160px;
         color: #ffffff;
         border-radius: 6px;
         padding: 8px 0;
         position: absolute;
         z-index: 2;
-        bottom: 10%;
-        left: -70%;
+        left: -100%;
         font-size: 12px;
       }
       
       .projet .texteProjet2, .texteProjet4 {
         visibility: hidden;
-        width: 120px;
+        width: 160px;
         color: #ffffff;
         border-radius: 6px;
         padding: 8px 0;
         position: absolute;
         z-index: 2;
-        bottom: 10%;
-        right: -70%;
+        right: -100%;
         font-size: 12px;
       }
       
+
+      .projet .show1 {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
       h1.titleProjets{
         text-align: center;
       }
   
+      .plus{
+        display: none;
+      }
+      .plus2{
+        display: none;
+      }
+
+
+      .carreBleu{
+        display: none;
+      }
+  
+      .carreBleu2{
+        display: none;
+      }
+}
+@media (min-width: 701px) {
+
+  .activ3{
+    box-shadow: 3px 2px 50px rgb(202, 245, 255);
+  }
+
+  div.cont-projet {
+    display: grid;
+    position: relative;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    transition: 0.4s ease-out;
+  }
+
+  h1.titleProjets {
+    text-align: center;
+    font-family: 'Martian Mono', monospace;
+    font-size: 30px;
+    color:#C4E7D4;
+  }
+
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* chaque projet */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+
+  #projet1, #projet3, #projet5{
+    height: 280px;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.4s ease-out;
+    margin-bottom: 5vh;
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+    z-index: 6;
+  }
+
+  #projet2, #projet4{
+    height: 280px;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.4s ease-out;
+    margin-bottom: 5vh;
+    position: relative;
+    margin-left: 0;
+    margin-right: auto;
+    z-index: 100;
+  }
+
+
+ 
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* Texte descriptif de chaque projet */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+
+  .projet .texteProjet {
+    width: 120%;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 25%;
+    left: -150%;
+    font-size: 12px;
+  }
+  .texteProjet3, .texteProjet5 {
+    width: 120%;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 15%;
+    left: -150%;
+    font-size: 12px;
+  }
+  .projet .texteProjet2, .texteProjet4{
+    width: 120%;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 25%;
+    right: -140%;
+    font-size: 12px;
+  }
+  
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* Titres de projets */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+    .titleProjetDroite{
+      color: #c4e7d4;
+      font-size: 26px;
+      left: -150%;
+      position: relative;
+    }
+    .titleProjetGauche{
+      color: #c4e7d4;
+      font-size: 26px;
+      right: -120%;
+      position: relative;
+    }
+
+
+    .plus{
+      color: #c4e7d4;
+      font-size: 12px;
+      left: -150%;
+      position: relative;
+      top: -5%;
+    }
+    .plus2{
+      color: #c4e7d4;
+      font-size: 12px;
+      right: -120%;
+      position: relative;
+      top: -5%;
+    }
+
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* element masquant le texte */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+    .carreBleu{
+      position: relative;
+      z-index: 4;
+      height: 160px;
+      width: 250px;
+      left: -150%;
+      background-color: #030027;
+      transition: 1.5s;
+      top: -6%;
+    }
+
+    .carreBleu2{
+    position: relative;
+    z-index: 4;
+    height: 180px;
+    width: 250px;
+    right: -120%;
+    background-color: #030027;
+    transition: 1.5s;
+    }
+
 }
 
-
-  @media (min-width: 701px) and (max-width: 1000px) {
-    
-    h1.titleProjets {
-      font-family: 'Martian Mono', monospace;
-      font-size: 40px;
-      color: #C4E7D4;
-      padding: 5%;
-  }
-
-    div.cont-projet .activ3 {
-    transform: scale(1.2);
-    z-index: 2;
-    }
-  
-    .enableBlur>* {
-      filter: blur(6px);
-      pointer-events: none;
-    }
-  
-    .disableBlur {
-      filter: blur(0);
-      pointer-events:all;
-    }
-  
-    .disbaleZindex{
-      z-index: 1;
-    }
-    
-    .projet {
-      background-color: #030027;
-      border-radius: 10px;
-      box-shadow: 3px 2px 50px rgb(202, 245, 255);
-      position: relative;
-      cursor: pointer;
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-left: 2%;
-      margin-right: 2%;
-      width: 45vw;
-      height:50%;
-    }
-    
-    .premier-container-projet{
-      overflow-x: scroll;
-      overflow-y: hidden;
-      position: relative;
-      scroll-snap-type: x mandatory;
-
-    }
-
-    div.cont-projet {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 80vh;
-        justify-content: space-between;
-        padding-left: 8%;
-        padding-right: 8%;
-        width: max-content;
-        padding: 1%;
-    }
-  
-      .projet .texteProjet, .texteProjet2, .texteProjet3 {
-    visibility: hidden;
-    color: #ffffff;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 2;
-    left: 105%;
-    background-color: #4da7a1ba;
-    width: 85%;
-    padding: 5%;
-    /* bottom: 10%; */
-    font-size: 24px;
-  }
-  
-  .projet .texteProjet4, .texteProjet5{
-    visibility: hidden;
-    color: #ffffff;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 2;
-    right: 105%;
-    background-color: #4da7a1ba;
-    width: 85%;
-    padding: 5%;
-    bottom: 10%;
-    font-size: 24px;
-  }
-  }
-
-
-
-
-
-  @media (min-width: 1001px) and (max-width: 1300px) {
-    
-    h1.titleProjets {
-      font-family: 'Martian Mono', monospace;
-      font-size: 40px;
-      color: #C4E7D4;
-      padding: 5%;
-  }
-
-    div.cont-projet .activ3 {
-    transform: scale(1.2);
-    z-index: 2;
-    }
-  
-    .enableBlur>* {
-      filter: blur(6px);
-      pointer-events: none;
-    }
-  
-    .disableBlur {
-      filter: blur(0);
-      pointer-events:all;
-    }
-  
-    .disbaleZindex{
-      z-index: 1;
-    }
-    
-    .projet {
-      background-color: #030027;
-      border-radius: 10px;
-      box-shadow: 3px 2px 50px rgb(202, 245, 255);
-      position: relative;
-      cursor: pointer;
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-left: 2%;
-      margin-right: 2%;
-      width: 45vw;
-      height:80%;
-    }
-    
-    .premier-container-projet{
-      overflow-x: scroll;
-      overflow-y: hidden;
-      position: relative;
-      scroll-snap-type: x mandatory;
-
-    }
-
-    div.cont-projet {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 80vh;
-        justify-content: space-between;
-        padding-left: 8%;
-        padding-right: 8%;
-        width: max-content;
-        padding: 1%;
-    }
-  
-      .projet .texteProjet, .texteProjet2, .texteProjet3 {
-    visibility: hidden;
-    color: #ffffff;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 2;
-    left: 103%;
-    background-color: #4da7a1ba;
-    width: 90%;
-    padding: 5%;
-    bottom: 10%;
-    font-size: 24px;
-  }
-  
-  .projet .texteProjet4, .texteProjet5{
-    visibility: hidden;
-    color: #ffffff;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 2;
-    right: 103%;
-    background-color: #4da7a1ba;
-    width: 90%;
-    padding: 5%;
-    bottom: 10%;
-    font-size: 24px;
-  }
-  }
-
-
-
-
-
-
-  @media (min-width: 1301px) and (max-width: 1700px) {
-    
-    h1.titleProjets {
-      font-family: 'Martian Mono', monospace;
-      font-size: 40px;
-      color: #C4E7D4;
-      padding: 5%;
-  }
-
-    div.cont-projet .activ3 {
-    transform: scale(1.2);
-    z-index: 2;
-    }
-  
-    .enableBlur>* {
-      filter: blur(6px);
-      pointer-events: none;
-    }
-  
-    .disableBlur {
-      filter: blur(0);
-      pointer-events:all;
-    }
-  
-    .disbaleZindex{
-      z-index: 1;
-    }
-    
-    .projet {
-      background-color: #030027;
-      border-radius: 10px;
-      box-shadow: 3px 2px 50px rgb(202, 245, 255);
-      position: relative;
-      cursor: pointer;
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-left: 2%;
-      margin-right: 2%;
-      width: 35vw;
-      height:65%;
-    }
-    
-    .premier-container-projet{
-      overflow-x: scroll;
-      overflow-y: hidden;
-      position: relative;
-      scroll-snap-type: x mandatory;
-
-    }
-
-    div.cont-projet {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 80vh;
-        justify-content: space-between;
-        padding-left: 8%;
-        padding-right: 8%;
-        width: max-content;
-    }
-  
-      .projet .texteProjet, .texteProjet2, .texteProjet3 {
-    visibility: hidden;
-    color: #ffffff;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 2;
-    left: 110%;
-    background-color: #4da7a1ba;
-    width: 100%;
-    padding: 5%;
-    bottom: 10%;
-    font-size: 24px;
-  }
-  
-  .projet .texteProjet4, .texteProjet5{
-    visibility: hidden;
-    color: #ffffff;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 2;
-    right: 110%;
-    background-color: #4da7a1ba;
-    width: 100%;
-    padding: 5%;
-    bottom: 10%;
-  }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-    @media screen and (min-width: 1701px){
-
-
-      h1.titleProjets {
-        font-family: 'Martian Mono', monospace;
-        font-size: 40px;
-        color: #C4E7D4;
-        padding: 5%;
-    }
-  
-      div.cont-projet .activ3 {
-      transform: scale(1.2);
-      z-index: 2;
-      }
-  
-    
-    
-      .enableBlur>* {
-        filter: blur(6px);
-        pointer-events: none;
-      }
-    
-      .disableBlur {
-        filter: blur(0);
-        pointer-events:all;
-      }
-    
-      .disbaleZindex{
-        z-index: 1;
-      }
-      
-      .projet {
-
-        /* background-color: #030027; */
-        border-radius: 10px;
-        box-shadow: 3px 2px 50px rgb(202, 245, 255);
-        position: relative;
-        cursor: pointer;
-        height: 80%;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        width: 15vw;
-        height: 70%;
-    
-      }
-      
-     
-  
-      div.cont-projet {
-          display: flex;
-          flex-direction: row;
-          position: relative;
-          height: 80vh;
-          justify-content: space-between;
-          padding-left: 3%;
-          padding-right: 3%;
-
-      }
-      .projet .texteProjet, .texteProjet2, .texteProjet3 {
-        visibility: hidden;
-        color: #ffffff;
-        border-radius: 6px;
-        position: absolute;
-        z-index: 2;
-        left: 110%;
-    background-color: #4da7a1ba;
-    width: 100%;
-    padding: 5%;
-    bottom: 10%;
-    font-size: 24px;
-      }
-      
-      .projet .texteProjet4, .texteProjet5{
-        visibility: hidden;
-        color: #ffffff;
-        border-radius: 6px;
-        position: absolute;
-        z-index: 2;
-        right: 110%;
-        background-color: #4da7a1ba;
-        width: 100%;
-        padding: 5%;
-        bottom: 10%;
-        font-size: 24px;
-      }
-      
-
-    
-    }
 
 
   
@@ -525,10 +340,13 @@
   
     
     /* Toggle this class - hide and show the projet */
-    .projet .show {
-      visibility: visible;
-      -webkit-animation: fadeIn 1s;
-      animation: fadeIn 1s;
+    #carreBleuText1.carreBleu.show,#carreBleuText3.carreBleu.show,#carreBleuText5.carreBleu.show {
+      width: 0;
+      
+    }
+    #carreBleuText2.carreBleu2.show,#carreBleuText4.carreBleu2.show{
+      width: 0;
+      
     }
     
     /* Add animation (fade in the projet) */
@@ -552,12 +370,16 @@
     .premier-container-projet{
       border: #C4E7D4 2px solid;
       padding: 1%;
+      z-index: 5;
+      position: relative;
     }
 
     .cont-proj{
       border: #c4e7d4a6 2px solid;
       padding: 1%;
       margin: 1%;
+      z-index: 5;
+      position: relative;
     }
 
 

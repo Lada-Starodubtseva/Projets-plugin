@@ -46,15 +46,18 @@ function creation_Projet(){
                 <div class="cont-proj">
 
 
-                    <div class="premier-container-projet" id="scroller">
+                    <div class="premier-container-projet">
 
                         <div class="cont-projet  disbaleZindex" id="cont-projet">
-                            <div id="projet1" class="projet" onclick="showText() , moveDiv1back()" >
+                            <div id="projet1" class="projet" onclick="showText(), showText1()  , moveDiv1back()" >
                         
 
-                                <h3 class="title"></h3>
-                                <img src="" alt="">
+                                <h3 class="titleProjetDroite" id="title1">Les Chroniques Dystopiques</h3>
+                                <p class="plus">Plus...</p>
 
+                                <div id="carreBleuText1" class="carreBleu"></div>
+                               
+                             
                                 <p id="projText" class="texteProjet ">
                                     Les Chroniques Dystopiques
                                     <br> Projet réalisé au cours de jeux en équipe 
@@ -64,9 +67,11 @@ function creation_Projet(){
                                 </p>
                             </div>
 
-                            <div id="projet2" class="projet" onclick="showText2() , moveDiv2back()" >
-                                <h3 class="title"></h3>
-                                <img src="" alt="">
+                            <div id="projet2" class="projet" onclick="showText2(), showText12(), moveDiv2back()" >
+                            <h3 class="titleProjetGauche" id="title2">Machine</h3>
+                            <p class="plus2">Plus...</p>
+                            <div id="carreBleuText2" class="carreBleu2"></div>
+                           
 
                                 <p id="projText2" class="texteProjet2 ">
                                     Lorem, ipsum dolor sit 
@@ -80,8 +85,10 @@ function creation_Projet(){
                                 </p>
                             </div>
 
-                            <div id="projet3"  class="projet" onclick="showText3() ,moveDiv3back()" >
-                                <h3 class="title"></h3>
+                            <div id="projet3"  class="projet" onclick="showText3(), showText13() ,moveDiv3back()" >
+                                <h3 class="titleProjetDroite" id="title3">Personnage fantastique</h3>
+                                <p class="plus">Plus...</p>
+                                <div id="carreBleuText3" class="carreBleu"></div>
                                 <img src=""alt="">
 
                                 <p id="projText3" class="texteProjet3 ">
@@ -96,9 +103,11 @@ function creation_Projet(){
                                 </p>
                             </div>
 
-                            <div id="projet4" class="projet" onclick="showText4() , moveDiv4back()" >
-                                <h3 class="title"></h3>
-                                <img src="" alt="">
+                            <div id="projet4" class="projet" onclick="showText4(), showText14() , moveDiv4back()" >
+                                <h3 class="titleProjetGauche" id="title4">Somnuim</h3>
+                                <p class="plus2">Plus...</p>
+                                <div id="carreBleuText4" class="carreBleu2"></div>
+                               
 
                                 <p id="projText4" class="texteProjet4 ">
                                     Lorem, ipsum dolor sit 
@@ -111,11 +120,13 @@ function creation_Projet(){
                                     pariatur?
                                 </p>
                             </div>
-                            <div id="projet5" class="projet" onclick="showText5() , moveDiv5back()" >
-                                <h3 class="</h3>
-                                <img src="" alt="">
+                            <div id="projet5" class="projet" onclick="showText5() ,showText15(), moveDiv5back()" >
+                            <h3 class="titleProjetDroite" id="title5">Drame en noir et blanc</h3>
+                            <p class="plus">Plus...</p>
+                                <div id="carreBleuText5" class="carreBleu"></div>
+                               
 
-                                <p id="projText5" class="texteProjet5 ">
+                                <p id="projText5" class="texteProjet5">
                                     Lorem, ipsum dolor sit 
                                     amet consectetur adipisicing 
                                     elit. Nobis enim blanditiis 
