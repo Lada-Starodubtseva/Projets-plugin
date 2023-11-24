@@ -51,7 +51,6 @@ function creation_Projet(){
                         <div class="cont-projet  disbaleZindex" id="cont-projet">
                             <div id="projet1" class="projet" onclick="showText(), showText1()  , moveDiv1back()" >
                         
-
                                 <h3 class="titleProjetDroite" id="title1">Les Chroniques Dystopiques</h3>
                                 <p class="plus">Plus...</p>
 
@@ -61,8 +60,8 @@ function creation_Projet(){
                                 <p id="projText" class="texteProjet ">
                                     Les Chroniques Dystopiques
                                     <br> Projet réalisé au cours de jeux en équipe 
-                                    <br> Par Nicolas Carrière, Vincent Lagarde  
-                                    <br> Antoine Chambelant et ... 
+                                    <br> Par Nicolas Carrière, Victor Desjardins  
+                                    <br> Antoine Chamberland-Dyotte 
                                     
                                 </p>
                             </div>
@@ -74,14 +73,9 @@ function creation_Projet(){
                            
 
                                 <p id="projText2" class="texteProjet2 ">
-                                    Lorem, ipsum dolor sit 
-                                    amet consectetur adipisicing 
-                                    elit. Nobis enim blanditiis 
-                                    est quam, porro, animi repellendus 
-                                    veniam libero, quas officia 
-                                    architecto similique! Ab voluptates 
-                                    laboriosam quibusdam tenetur aut dolor 
-                                    pariatur?
+                                    Modelisation realise par Marie-Eve Pelletier
+                                    <br> dans le carde du cours de 
+                                    <br>imagerie 3D
                                 </p>
                             </div>
 
@@ -92,14 +86,9 @@ function creation_Projet(){
                                 <img src=""alt="">
 
                                 <p id="projText3" class="texteProjet3 ">
-                                    Lorem, ipsum dolor sit 
-                                    amet consectetur adipisicing 
-                                    elit. Nobis enim blanditiis 
-                                    est quam, porro, animi repellendus 
-                                    veniam libero, quas officia 
-                                    architecto similique! Ab voluptates 
-                                    laboriosam quibusdam tenetur aut dolor 
-                                    pariatur?
+                                Modelisation realise par 
+                                <br>Kajanthan Seevarathinam
+                                <br> dans le carde du cours dAnimation 3D
                                 </p>
                             </div>
 
@@ -110,14 +99,9 @@ function creation_Projet(){
                                
 
                                 <p id="projText4" class="texteProjet4 ">
-                                    Lorem, ipsum dolor sit 
-                                    amet consectetur adipisicing 
-                                    elit. Nobis enim blanditiis 
-                                    est quam, porro, animi repellendus 
-                                    veniam libero, quas officia 
-                                    architecto similique! Ab voluptates 
-                                    laboriosam quibusdam tenetur aut dolor 
-                                    pariatur?
+                                    Somnuim : un talisman du peuple Djinndalis
+                                    <br> Modelise par Nicolas Carriere
+                                    <br> au cadre du cours dimagerie 3D
                                 </p>
                             </div>
                             <div id="projet5" class="projet" onclick="showText5() ,showText15(), moveDiv5back()" >
@@ -127,14 +111,9 @@ function creation_Projet(){
                                
 
                                 <p id="projText5" class="texteProjet5">
-                                    Lorem, ipsum dolor sit 
-                                    amet consectetur adipisicing 
-                                    elit. Nobis enim blanditiis 
-                                    est quam, porro, animi repellendus 
-                                    veniam libero, quas officia 
-                                    architecto similique! Ab voluptates 
-                                    laboriosam quibusdam tenetur aut dolor 
-                                    pariatur?
+                                    Le drame en noir et blanc
+                                    <br> Realise par Lada Starodubtseva
+                                    <br> dans le cardre du cours dimagrie vectorielle
                                 </p>
                             </div>
                         </div>

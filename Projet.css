@@ -35,21 +35,20 @@
   background-size: cover;
 }
 
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
 
   .titleProjetDroite{
     visibility: hidden;
     color: #c4e7d4;
     font-size: 20px;
-    left: -100%;
+    left: -105%;
     position: relative;
   }
   .titleProjetGauche{
     visibility: hidden;
     color: #c4e7d4;
     font-size: 20px;
-    right: -120%;
+    right: -110%;
     position: relative;
   }
 
@@ -61,16 +60,16 @@
     
   
     div.cont-projet .activ {
-    transform: translateX(70px);
+    transform: translateX(80px);
     }
     div.cont-projet .activ2 {
-    transform: translateX(-70px);
+    transform: translateX(-80px);
     }
       
    
     .projet {
-      height: 280px;
-      width: 200px;
+      height: 240px;
+      width: 150px;
       background-color: #030027;
       border-radius: 10px;
       transition: 0.4s ease-out;
@@ -91,33 +90,33 @@
         overflow: scroll;
         height: 80vh;
         justify-content: center;
-        padding-left: 8%;
-        padding-right: 8%;
+        padding-left: 4%;
+        padding-right: 4%;
         padding-top: 2%;
         padding-bottom: 2%;
       }
       /* The actual projet (div) */
       .projet .texteProjet, .texteProjet3, .texteProjet5 {
         visibility: hidden;
-        width: 160px;
+        width: 140px;
         color: #ffffff;
         border-radius: 6px;
         padding: 8px 0;
         position: absolute;
         z-index: 2;
-        left: -100%;
+        left: -105%;
         font-size: 12px;
       }
       
       .projet .texteProjet2, .texteProjet4 {
         visibility: hidden;
-        width: 160px;
+        width: 140px;
         color: #ffffff;
         border-radius: 6px;
         padding: 8px 0;
         position: absolute;
         z-index: 2;
-        right: -100%;
+        right: -105%;
         font-size: 12px;
       }
       
@@ -147,7 +146,117 @@
         display: none;
       }
 }
-@media (min-width: 701px) {
+@media (min-width: 401px) and (max-width: 700px) {
+  .titleProjetDroite{
+    visibility: hidden;
+    color: #c4e7d4;
+    font-size: 20px;
+    left: -115%;
+    position: relative;
+  }
+  .titleProjetGauche{
+    visibility: hidden;
+    color: #c4e7d4;
+    font-size: 20px;
+    right: -115%;
+    position: relative;
+  }
+
+  h1.titleProjets {
+    font-family: 'Martian Mono', monospace;
+    font-size: 30px;
+    color:#C4E7D4;
+    }
+    
+  
+    div.cont-projet .activ {
+    transform: translateX(85px);
+    }
+    div.cont-projet .activ2 {
+    transform: translateX(-85px);
+    }
+      
+   
+    .projet {
+      height: 240px;
+      width: 150px;
+      background-color: #030027;
+      border-radius: 10px;
+      transition: 0.4s ease-out;
+      left: 0px;
+      box-shadow: 3px 2px 50px rgb(202, 245, 255);
+      margin-bottom: 2vh;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+  
+    }
+ 
+    
+     div.cont-projet {
+        display: grid;
+        flex-direction: row;
+        position: relative;
+        overflow: scroll;
+        height: 80vh;
+        justify-content: center;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+      /* The actual projet (div) */
+      .projet .texteProjet, .texteProjet3, .texteProjet5 {
+        visibility: hidden;
+        width: 140px;
+        color: #ffffff;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 2;
+        left: -115%;
+        font-size: 12px;
+      }
+      
+      .projet .texteProjet2, .texteProjet4 {
+        visibility: hidden;
+        width: 140px;
+        color: #ffffff;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 2;
+        right: -115%;
+        font-size: 12px;
+      }
+      
+
+      .projet .show1 {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+      h1.titleProjets{
+        text-align: center;
+      }
+  
+      .plus{
+        display: none;
+      }
+      .plus2{
+        display: none;
+      }
+
+
+      .carreBleu{
+        display: none;
+      }
+  
+      .carreBleu2{
+        display: none;
+      }
+}
+@media (min-width: 701px) and (max-width: 1099px) {
 
   .activ3{
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
@@ -219,7 +328,7 @@
     padding: 8px 0;
     position: absolute;
     z-index: 2;
-    bottom: 25%;
+    bottom: 15%;
     left: -150%;
     font-size: 12px;
   }
@@ -310,6 +419,169 @@
     transition: 1.5s;
     }
 
+}
+@media (min-width: 1100px) {
+
+  .activ3{
+    box-shadow: 3px 2px 50px rgb(202, 245, 255);
+  }
+
+  div.cont-projet {
+    display: grid;
+    position: relative;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    transition: 0.4s ease-out;
+  }
+
+  h1.titleProjets {
+    text-align: center;
+    font-family: 'Martian Mono', monospace;
+    font-size: 30px;
+    color:#C4E7D4;
+  }
+
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* chaque projet */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+
+  #projet1, #projet3, #projet5{
+    height: 460px;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.4s ease-out;
+    margin-bottom: 5vh;
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+    z-index: 6;
+  }
+
+  #projet2, #projet4{
+    height: 460px;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.4s ease-out;
+    margin-bottom: 5vh;
+    position: relative;
+    margin-left: 0;
+    margin-right: auto;
+    z-index: 100;
+  }
+
+
+ 
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* Texte descriptif de chaque projet */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+
+  .projet .texteProjet {
+    width: 120%;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 15%;
+    left: -150%;
+    font-size: 24px;
+  }
+  .texteProjet3, .texteProjet5 {
+    width: 120%;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: -150%;
+    font-size: 24px;
+  }
+  .projet .texteProjet2, .texteProjet4{
+    width: 120%;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 15%;
+    right: -140%;
+    font-size: 24px;
+  }
+  
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* Titres de projets */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+    .titleProjetDroite{
+      color: #c4e7d4;
+      font-size: 30px;
+      left: -150%;
+      position: relative;
+    }
+    .titleProjetGauche{
+      color: #c4e7d4;
+      font-size: 30px;
+      right: -120%;
+      position: relative;
+    }
+
+
+    .plus{
+      color: #c4e7d4;
+      font-size: 16px;
+      left: -150%;
+      position: relative;
+      top: -5%;
+    }
+    .plus2{
+      color: #c4e7d4;
+      font-size: 16px;
+      right: -120%;
+      position: relative;
+      top: -5%;
+    }
+
+  /**************************************/
+  /**************************************/
+  /**************************************/
+  /* element masquant le texte */
+  /**************************************/
+  /**************************************/
+  /**************************************/
+    .carreBleu{
+      position: relative;
+      z-index: 4;
+      height: 270px;
+      width: 360px;
+      left: -150%;
+      background-color: #030027;
+      transition: 1.5s;
+      top: -6%;
+    }
+
+    .carreBleu2{
+    position: relative;
+    z-index: 4;
+    height: 270px;
+    width: 360px;
+    right: -120%;
+    background-color: #030027;
+    transition: 1.5s;
+    }
 }
 
 
