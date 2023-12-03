@@ -3,7 +3,7 @@
 /*
     Plugin name: Afficher-Projet
     Author: Lada Starodubtseva
-    Plugin url:
+    Plugin url:https://github.com/Lada-Starodubtseva/Projets-plugin
     Version: 1.0.0
     Description: Permet d'afficher les Projet des etudiants
 */
@@ -23,7 +23,7 @@ function Projet_enqueue()
 $version_css = filemtime(plugin_dir_path( __FILE__ ) . "Projet.css");
 $version_js = filemtime(plugin_dir_path(__FILE__) . "Projet.js");
  
-    wp_enqueue_style(   'em_plugin_Projet_scss',
+    wp_enqueue_style(   'em_plugin_Projet_css',
                      plugin_dir_url(__FILE__) . "Projet.css",
                      array(),
                      $version_css);
@@ -39,91 +39,17 @@ add_action('wp_enqueue_scripts', 'Projet_enqueue');
  
  
 function creation_Projet(){
-    $contenu = '
-
-    <section class="site__projets">
+    $contenu = '<section class="site__projets" id="site_avec_projets">
     <h1 class="titleProjets">PROJETS DES ÉLÈVES</h1>
-                <div class="cont-proj">
 
+    <div class="cont-proj">
 
-                    <div class="premier-container-projet">
+        <div class="premier-container-projet">
+        <div class="cont-projet  disbaleZindex" id="cont-projet">";
 
-                        <div class="cont-projet  disbaleZindex" id="cont-projet">
-                            <div id="projet1" class="projet" onclick="showText(), showText1()  , moveDiv1back()" >
-                        
-                                <h3 class="titleProjetDroite" id="title1">Les Chroniques Dystopiques</h3>
-                                <p class="plus">Plus...</p>
+      ';
 
-                                <div id="carreBleuText1" class="carreBleu"></div>
-                               
-                             
-                                <p id="projText" class="texteProjet ">
-                                    Les Chroniques Dystopiques
-                                    <br> Projet réalisé au cours de jeux en équipe 
-                                    <br> Par Nicolas Carrière, Victor Desjardins  
-                                    <br> Antoine Chamberland-Dyotte 
-                                    
-                                </p>
-                            </div>
-
-                            <div id="projet2" class="projet" onclick="showText2(), showText12(), moveDiv2back()" >
-                            <h3 class="titleProjetGauche" id="title2">Machine</h3>
-                            <p class="plus2">Plus...</p>
-                            <div id="carreBleuText2" class="carreBleu2"></div>
-                           
-
-                                <p id="projText2" class="texteProjet2 ">
-                                    Modelisation realise par Marie-Eve Pelletier
-                                    <br> dans le carde du cours de 
-                                    <br>imagerie 3D
-                                </p>
-                            </div>
-
-                            <div id="projet3"  class="projet" onclick="showText3(), showText13() ,moveDiv3back()" >
-                                <h3 class="titleProjetDroite" id="title3">Personnage fantastique</h3>
-                                <p class="plus">Plus...</p>
-                                <div id="carreBleuText3" class="carreBleu"></div>
-                                <img src=""alt="">
-
-                                <p id="projText3" class="texteProjet3 ">
-                                Modelisation realise par 
-                                <br>Kajanthan Seevarathinam
-                                <br> dans le carde du cours dAnimation 3D
-                                </p>
-                            </div>
-
-                            <div id="projet4" class="projet" onclick="showText4(), showText14() , moveDiv4back()" >
-                                <h3 class="titleProjetGauche" id="title4">Somnuim</h3>
-                                <p class="plus2">Plus...</p>
-                                <div id="carreBleuText4" class="carreBleu2"></div>
-                               
-
-                                <p id="projText4" class="texteProjet4 ">
-                                    Somnuim : un talisman du peuple Djinndalis
-                                    <br> Modelise par Nicolas Carriere
-                                    <br> au cadre du cours dimagerie 3D
-                                </p>
-                            </div>
-                            <div id="projet5" class="projet" onclick="showText5() ,showText15(), moveDiv5back()" >
-                            <h3 class="titleProjetDroite" id="title5">Drame en noir et blanc</h3>
-                            <p class="plus">Plus...</p>
-                                <div id="carreBleuText5" class="carreBleu"></div>
-                               
-
-                                <p id="projText5" class="texteProjet5">
-                                    Le drame en noir et blanc
-                                    <br> Realise par Lada Starodubtseva
-                                    <br> dans le cardre du cours dimagrie vectorielle
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-          
-    </section>';
-    return $contenu;
+return $contenu;
 }
  
 add_shortcode('em_Projet', 'creation_Projet');

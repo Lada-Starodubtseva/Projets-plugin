@@ -1,50 +1,77 @@
-
-
+/* ****************** */
+/* ****************** */
+/* ******General***** */
+/* ****************** */
+/* ****************** */
 #projet1{
-  background-image:url(http://localhost:8080/5w5/wp-content/uploads/2023/10/Projets/Nicolas%20Carriere/Affiche_Chroniques_Dystopique.jpg);
   background-attachment: local;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #projet2{
-  background-image:url(http://localhost:8080/5w5/wp-content/uploads/2023/10/Projets/Marie-Eve%20Pelletier/ImageFinale01.jpg);
   background-attachment: local;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #projet3{
-  background-image:url(http://localhost:8080/5w5/wp-content/uploads/2023/10/Projets/Kajanthan%20Seevarathinam/Perso2.jpg);
   background-attachment: local;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #projet4{
-  background-image:url(http://localhost:8080/5w5/wp-content/uploads/2023/10/Projets/Nicolas%20Carriere/Talisman.png);
   background-attachment: local;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #projet5{
-  background-image:url(http://localhost:8080/5w5/wp-content/uploads/2023/10/Projets/Lada/Black-and-white.jpg);
   background-attachment: local;
   background-repeat: no-repeat;
-  background-size: cover;
 }
+.site_projets{
+  width: 100vw;
+}
+
+
+/* ****************** */
+/* ****************** */
+/* ******400px******* */
+/* ****************** */
+/* ****************** */
+
 
 @media screen and (max-width: 400px) {
 
-  .titleProjetDroite{
+/* ****************** */
+/* ******debut******* */
+/* ****************** */
+
+
+h1.titleProjets{
+  text-align: center;
+}
+
+section.site__projets{
+  display: grid;
+  justify-items: center;
+  align-content: space-around;
+}
+  
+
+/* *********************************** */
+/* ******display texte et titre******* */
+/* *********************************** */
+
+#titleprojDiv21, 
+#titleprojDiv23, 
+#titleprojDiv25 {
     visibility: hidden;
     color: #c4e7d4;
     font-size: 20px;
     left: -105%;
     position: relative;
   }
-  .titleProjetGauche{
+#titleprojDiv22, 
+#titleprojDiv24{
     visibility: hidden;
     color: #c4e7d4;
     font-size: 20px;
@@ -52,211 +79,352 @@
     position: relative;
   }
 
-  h1.titleProjets {
-    font-family: 'Martian Mono', monospace;
-    font-size: 30px;
-    color:#C4E7D4;
-    }
-    
+  #titleprojDiv21.show1,
+  #titleprojDiv23.show1, 
+  #titleprojDiv25.show1,
+  #titleprojDiv22.show1,
+  #titleprojDiv24.show1 {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+
+  .article 
+  #projTextprojDiv21, 
+  #projTextprojDiv23, 
+  #projTextprojDiv25 {
+    visibility: hidden;
+    width: 140px;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    left: -105%;
+    font-size: 12px;
+  }
   
-    div.cont-projet .activ {
-    transform: translateX(80px);
-    }
-    div.cont-projet .activ2 {
-    transform: translateX(-80px);
-    }
+  .article 
+  #projTextprojDiv22, 
+  #projTextprojDiv24 {
+    visibility: hidden;
+    width: 140px;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    right: -105%;
+    font-size: 12px;
+  }
+  
+
+  .article 
+  #projTextprojDiv21.show1, 
+  #projTextprojDiv23.show1, 
+  #projTextprojDiv25.show1,
+  #projTextprojDiv22.show1, 
+  #projTextprojDiv24.show1 {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+
+  }
+
+/* *********************************** */
+/* ******display Div projet*********** */
+/* *********************************** */
+  
+  #projDiv21.activ, 
+  #projDiv23.activ, 
+  #projDiv25.activ  {
+  transform: translateX(80px);
+  }
+  #projDiv22.activ2,
+  #projDiv24.activ2 {
+  transform: translateX(-80px);
+  }
       
    
-    .projet {
-      height: 240px;
-      width: 150px;
-      background-color: #030027;
-      border-radius: 10px;
-      transition: 0.4s ease-out;
-      left: 0px;
-      box-shadow: 3px 2px 50px rgb(202, 245, 255);
-      margin-bottom: 2vh;
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-  
-    }
- 
-    
-     div.cont-projet {
-        display: grid;
-        flex-direction: row;
-        position: relative;
-        overflow: scroll;
-        height: 80vh;
-        justify-content: center;
-        padding-left: 4%;
-        padding-right: 4%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-      }
-      /* The actual projet (div) */
-      .projet .texteProjet, .texteProjet3, .texteProjet5 {
-        visibility: hidden;
-        width: 140px;
-        color: #ffffff;
-        border-radius: 6px;
-        padding: 8px 0;
-        position: absolute;
-        z-index: 2;
-        left: -105%;
-        font-size: 12px;
-      }
-      
-      .projet .texteProjet2, .texteProjet4 {
-        visibility: hidden;
-        width: 140px;
-        color: #ffffff;
-        border-radius: 6px;
-        padding: 8px 0;
-        position: absolute;
-        z-index: 2;
-        right: -105%;
-        font-size: 12px;
-      }
-      
+.article {
+  height: 240px;
+  width: 150px;
+  background-color: #030027;
+  border-radius: 10px;
+  transition: 0.4s ease-out;
+  left: 0px;
+  box-shadow: 3px 2px 50px rgb(202, 245, 255);
+  margin-bottom: 5vh;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 
-      .projet .show1 {
-        visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-      }
-      h1.titleProjets{
-        text-align: center;
-      }
-  
-      .plus{
-        display: none;
-      }
-      .plus2{
-        display: none;
-      }
-
-
-      .carreBleu{
-        display: none;
-      }
-  
-      .carreBleu2{
-        display: none;
-      }
 }
+
+.article img{
+  top: 0;
+  position: absolute;
+  height: -webkit-fill-available;
+  border-radius: 10px;
+}
+
+
+  div.cont-projet {
+    display: grid;
+    flex-direction: row;
+    position: relative;
+    overflow: scroll;
+    height: 80vh;
+    justify-content: center;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+
+/* elements sans  dispaly */
+
+  .plus{
+    display: none;
+  }
+  .plus2{
+    display: none;
+  }
+
+
+  .carreBleu{
+    display: none;
+  }
+
+  .carreBleu2{
+    display: none;
+  }
+}
+
+
+
+
+/* ****************** */
+/* ****************** */
+/* ******700px******* */
+/* ****************** */
+/* ****************** */
+
 @media (min-width: 401px) and (max-width: 700px) {
-  .titleProjetDroite{
+  section.site__projets{
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+  }
+
+  .article {
+    height: 240px;
+    width: 150px;
+    background-color: #030027;
+    border-radius: 10px;
+    transition: 0.4s ease-out;
+    left: 0px;
+    box-shadow: 3px 2px 50px rgb(202, 245, 255);
+    margin-bottom: 5vh;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+  }
+  
+  .article img{
+    top: 0;
+    position: absolute;
+    height: -webkit-fill-available;
+    border-radius: 10px;
+  }
+
+
+  /* ************************ */
+  /* ******Texte************* */
+  /* ************************ */
+
+  div.article p.texte{
+    display: none;
+  }
+
+  #titleprojDiv21,
+  #titleprojDiv23, 
+  #titleprojDiv25{
     visibility: hidden;
     color: #c4e7d4;
     font-size: 20px;
-    left: -115%;
+    left: -105%;
     position: relative;
   }
-  .titleProjetGauche{
+  
+  #titleprojDiv22,
+  #titleprojDiv24 {
     visibility: hidden;
     color: #c4e7d4;
     font-size: 20px;
     right: -115%;
     position: relative;
   }
+  #titleprojDiv21.show1,
+  #titleprojDiv23.show1, 
+  #titleprojDiv25.show1,
+  #titleprojDiv22.show1,
+  #titleprojDiv24.show1 {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
 
   h1.titleProjets {
     font-family: 'Martian Mono', monospace;
     font-size: 30px;
     color:#C4E7D4;
+  }
+    .article 
+    #projTextprojDiv21, 
+    #projTextprojDiv23, 
+    #projTextprojDiv25 {
+    visibility: hidden;
+    width: 140px;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    left: -105%;
+    font-size: 12px;
+  }
+  
+  .article 
+  #projTextprojDiv22, 
+  #projTextprojDiv24 {
+    visibility: hidden;
+    width: 140px;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 2;
+    right: -105%;
+    font-size: 12px;
+  }
+  
+
+  .article 
+  #projTextprojDiv21.show1, 
+  #projTextprojDiv23.show1, 
+  #projTextprojDiv25.show1 {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
     }
+
+    .article 
+    #projTextprojDiv22.show1, 
+    #projTextprojDiv24.show1{
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+
+    h1.titleProjets{
+      text-align: center;
+    }
+
+
+
+
+  /* ************************ */
+  /* ******Main div projet************* */
+  /* ************************ */
+
     
-  
-    div.cont-projet .activ {
-    transform: translateX(85px);
+  #projDiv21.activ, 
+  #projDiv23.activ, 
+  #projDiv25.activ  {
+    transform: translateX(80px);
     }
-    div.cont-projet .activ2 {
-    transform: translateX(-85px);
-    }
-      
-   
-    .projet {
-      height: 240px;
-      width: 150px;
-      background-color: #030027;
-      border-radius: 10px;
-      transition: 0.4s ease-out;
-      left: 0px;
-      box-shadow: 3px 2px 50px rgb(202, 245, 255);
-      margin-bottom: 2vh;
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-  
-    }
- 
-    
-     div.cont-projet {
-        display: grid;
-        flex-direction: row;
-        position: relative;
-        overflow: scroll;
-        height: 80vh;
-        justify-content: center;
-        padding-left: 4%;
-        padding-right: 4%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-      }
-      /* The actual projet (div) */
-      .projet .texteProjet, .texteProjet3, .texteProjet5 {
-        visibility: hidden;
-        width: 140px;
-        color: #ffffff;
-        border-radius: 6px;
-        padding: 8px 0;
-        position: absolute;
-        z-index: 2;
-        left: -115%;
-        font-size: 12px;
-      }
-      
-      .projet .texteProjet2, .texteProjet4 {
-        visibility: hidden;
-        width: 140px;
-        color: #ffffff;
-        border-radius: 6px;
-        padding: 8px 0;
-        position: absolute;
-        z-index: 2;
-        right: -115%;
-        font-size: 12px;
-      }
-      
 
-      .projet .show1 {
-        visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-      }
-      h1.titleProjets{
-        text-align: center;
-      }
+  #projDiv22.activ2, 
+  #projDiv24.activ2 {
+  transform: translateX(-80px);
+  }
   
-      .plus{
-        display: none;
-      }
-      .plus2{
-        display: none;
-      }
+      
+  div.cont-projet {
+    display: grid;
+    flex-direction: row;
+    position: relative;
+    overflow: scroll;
+    height: 80vh;
+    justify-content: center;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
 
 
-      .carreBleu{
-        display: none;
-      }
+
+  /* ************************ */
+  /* **Elements sans display* */
+  /* ************************ */
   
-      .carreBleu2{
-        display: none;
-      }
+  .plus{
+    display: none;
+  }
+  .plus2{
+    display: none;
+  }
+
+
+  .carreBleu{
+    display: none;
+  }
+
+  .carreBleu2{
+    display: none;
+  }
 }
-@media (min-width: 701px) and (max-width: 1099px) {
+
+
+
+
+/* ****************** */
+/* ****************** */
+/* ******1100px******* */
+/* ****************** */
+/* ****************** */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+  div.article p.texte{
+    display: none;
+  }
+  section.site__projets{
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+    width: 100vw;
+  }
+  .article img{
+    top: 0;
+    position: absolute;
+    height: -webkit-fill-available;
+    border-radius: 10px;
+  }
+
+
+  h1.titleProjets {
+    text-align: center;
+    font-family: 'Martian Mono', monospace;
+    font-size: 30px;
+    color:#C4E7D4;
+  }
 
   .activ3{
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
@@ -272,12 +440,7 @@
     transition: 0.4s ease-out;
   }
 
-  h1.titleProjets {
-    text-align: center;
-    font-family: 'Martian Mono', monospace;
-    font-size: 30px;
-    color:#C4E7D4;
-  }
+
 
   /**************************************/
   /**************************************/
@@ -287,29 +450,41 @@
   /**************************************/
   /**************************************/
 
-  #projet1, #projet3, #projet5{
-    height: 280px;
-    width: 200px;
+
+  #projDiv21, 
+  #projDiv23, 
+  #projDiv25 {
+    height: 240px;
+    width: 150px;
+    background-color: #030027;
     border-radius: 10px;
     transition: 0.4s ease-out;
+    right: 0px;
+    box-shadow: 3px 2px 50px rgb(202, 245, 255);
     margin-bottom: 5vh;
     position: relative;
-    margin-right: 0;
-    margin-left: auto;
-    z-index: 6;
+    display: inline-block;
+    cursor: pointer;
+
   }
 
-  #projet2, #projet4{
-    height: 280px;
-    width: 200px;
+  #projDiv22, 
+  #projDiv24 {
+    height: 240px;
+    width: 150px;
+    background-color: #030027;
     border-radius: 10px;
     transition: 0.4s ease-out;
+    margin-left: -80%;
+    box-shadow: 3px 2px 50px rgb(202, 245, 255);
     margin-bottom: 5vh;
     position: relative;
-    margin-left: 0;
-    margin-right: auto;
-    z-index: 100;
+    display: inline-block;
+    cursor: pointer;
+
   }
+
+
 
 
  
@@ -321,37 +496,30 @@
   /**************************************/
   /**************************************/
 
-  .projet .texteProjet {
+  .article
+  #projTextprojDiv21, 
+  #projTextprojDiv23, 
+  #projTextprojDiv25 {
     width: 120%;
     color: #ffffff;
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
     z-index: 2;
-    bottom: 15%;
+   
     left: -150%;
     font-size: 12px;
   }
-  .texteProjet3, .texteProjet5 {
+  .article 
+  #projTextprojDiv22, 
+  #projTextprojDiv24{
     width: 120%;
     color: #ffffff;
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
     z-index: 2;
-    bottom: 15%;
-    left: -150%;
-    font-size: 12px;
-  }
-  .projet .texteProjet2, .texteProjet4{
-    width: 120%;
-    color: #ffffff;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 2;
-    bottom: 25%;
-    right: -140%;
+    right: -150%;
     font-size: 12px;
   }
   
@@ -362,31 +530,40 @@
   /**************************************/
   /**************************************/
   /**************************************/
-    .titleProjetDroite{
+  #titleprojDiv21,
+  #titleprojDiv23, 
+  #titleprojDiv25{
       color: #c4e7d4;
       font-size: 26px;
       left: -150%;
       position: relative;
+      width: 200px
     }
-    .titleProjetGauche{
+    #titleprojDiv22,
+    #titleprojDiv24{
       color: #c4e7d4;
       font-size: 26px;
-      right: -120%;
+      right: -130%;
       position: relative;
+      width: 200px
     }
 
 
-    .plus{
+    #plusprojDiv21,
+    #plusprojDiv23, 
+    #plusprojDiv25{
       color: #c4e7d4;
       font-size: 12px;
       left: -150%;
       position: relative;
       top: -5%;
     }
-    .plus2{
+    
+    #plusprojDiv22,
+    #plusprojDiv24{
       color: #c4e7d4;
       font-size: 12px;
-      right: -120%;
+      right: -130%;
       position: relative;
       top: -5%;
     }
@@ -398,29 +575,51 @@
   /**************************************/
   /**************************************/
   /**************************************/
-    .carreBleu{
-      position: relative;
-      z-index: 4;
-      height: 160px;
-      width: 250px;
-      left: -150%;
-      background-color: #030027;
-      transition: 1.5s;
-      top: -6%;
-    }
-
-    .carreBleu2{
+  #carreBleuTextprojDiv21,
+  #carreBleuTextprojDiv23,
+  #carreBleuTextprojDiv25{
     position: relative;
     z-index: 4;
-    height: 180px;
-    width: 250px;
-    right: -120%;
+    height: 120px;
+    width: 180px;
+    left: -150%;
     background-color: #030027;
     transition: 1.5s;
-    }
+    top: -6%;
+  }
+
+
+  #carreBleuTextprojDiv22,
+  #carreBleuTextprojDiv24{
+  position: relative;
+  z-index: 4;
+  height: 120px;
+  width: 250px;
+  right: -130%;
+  background-color: #030027;
+  transition: 1.5s;
+  top: -6%;
+  }
+
+
 
 }
-@media (min-width: 1100px) {
+
+
+
+/* ****************** */
+/* ****************** */
+/* *****Infinite****** */
+/* ****************** */
+/* ****************** */
+
+
+
+@media (min-width: 1101px) {
+
+  div.article p.texte{
+  display: none;
+}
 
   .activ3{
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
@@ -451,7 +650,7 @@
   /**************************************/
   /**************************************/
 
-  #projet1, #projet3, #projet5{
+  .article{
     height: 460px;
     width: 300px;
     border-radius: 10px;
@@ -463,18 +662,7 @@
     z-index: 6;
   }
 
-  #projet2, #projet4{
-    height: 460px;
-    width: 300px;
-    border-radius: 10px;
-    transition: 0.4s ease-out;
-    margin-bottom: 5vh;
-    position: relative;
-    margin-left: 0;
-    margin-right: auto;
-    z-index: 100;
-  }
-
+ 
 
  
   /**************************************/
@@ -485,40 +673,36 @@
   /**************************************/
   /**************************************/
 
-  .projet .texteProjet {
+  
+  .article
+  #projTextprojDiv21, 
+  #projTextprojDiv23, 
+  #projTextprojDiv25 {
     width: 120%;
     color: #ffffff;
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
     z-index: 2;
-    bottom: 15%;
+   
     left: -150%;
-    font-size: 24px;
+    font-size: 12px;
   }
-  .texteProjet3, .texteProjet5 {
+  .article 
+  #projTextprojDiv22, 
+  #projTextprojDiv244{
     width: 120%;
     color: #ffffff;
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
     z-index: 2;
-    bottom: 5%;
-    left: -150%;
-    font-size: 24px;
-  }
-  .projet .texteProjet2, .texteProjet4{
-    width: 120%;
-    color: #ffffff;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 2;
-    bottom: 15%;
-    right: -140%;
-    font-size: 24px;
+    
+    right: -150%;
+    font-size: 12px;
   }
   
+
   /**************************************/
   /**************************************/
   /**************************************/
@@ -526,31 +710,37 @@
   /**************************************/
   /**************************************/
   /**************************************/
-    .titleProjetDroite{
+  #titleprojDiv21,
+  #titleprojDiv23, 
+  #titleprojDiv25{
       color: #c4e7d4;
       font-size: 30px;
       left: -150%;
       position: relative;
     }
-    .titleProjetGauche{
+    #titleprojDiv22,
+    #titleprojDiv24{
       color: #c4e7d4;
       font-size: 30px;
-      right: -120%;
+      right: -130%;
       position: relative;
     }
 
 
-    .plus{
+  #plusprojDiv21,
+  #plusprojDiv23, 
+  #plusprojDiv25{
       color: #c4e7d4;
       font-size: 16px;
       left: -150%;
       position: relative;
       top: -5%;
     }
-    .plus2{
+    #plusprojDiv22,
+    #plusprojDiv24{
       color: #c4e7d4;
       font-size: 16px;
-      right: -120%;
+      right: -130%;
       position: relative;
       top: -5%;
     }
@@ -562,7 +752,9 @@
   /**************************************/
   /**************************************/
   /**************************************/
-    .carreBleu{
+    #carreBleuTextprojDiv21, 
+    #carreBleuTextprojDiv23, 
+    #carreBleuTextprojDiv25{
       position: relative;
       z-index: 4;
       height: 270px;
@@ -573,14 +765,16 @@
       top: -6%;
     }
 
-    .carreBleu2{
-    position: relative;
-    z-index: 4;
-    height: 270px;
-    width: 360px;
-    right: -120%;
-    background-color: #030027;
-    transition: 1.5s;
+    #carreBleuTextprojDiv22, 
+    #carreBleuTextprojDiv24{
+      position: relative;
+      z-index: 4;
+      height: 270px;
+      width: 360px;
+      right: -150%;
+      background-color: #030027;
+      transition: 1.5s;
+      top: -6%;
     }
 }
 
@@ -599,12 +793,12 @@
   
   
     
-    .projet:hover {
+    .article:hover {
       transform: scale(105%);
       transition: 0.4s ease-out;
     }
     
-    .projet:hover ~ .projet {
+    .article:hover ~ .article {
       position: relative;
       transition: 0.4s ease-out;
     }
@@ -612,13 +806,15 @@
   
     
     /* Toggle this class - hide and show the projet */
-    #carreBleuText1.carreBleu.show,#carreBleuText3.carreBleu.show,#carreBleuText5.carreBleu.show {
+    #carreBleuTextprojDiv21.show,
+    #carreBleuTextprojDiv23.show,
+    #carreBleuTextprojDiv25.show {
       width: 0;
       
     }
-    #carreBleuText2.carreBleu2.show,#carreBleuText4.carreBleu2.show{
+    #carreBleuTextprojDiv22.show,
+    #carreBleuTextprojDiv24.show{
       width: 0;
-      
     }
     
     /* Add animation (fade in the projet) */
@@ -653,5 +849,4 @@
       z-index: 5;
       position: relative;
     }
-
-
+ 

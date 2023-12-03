@@ -52,7 +52,7 @@
           divProjet1.className = "article";
           divProjet1.innerHTML = `
               <h3 class="titleProjetDroite" id="title${uniqueId}">${article.title.rendered}</h3>
-              <p class="plus">Plus...</p>
+              <p id="plus${uniqueId}">Plus...</p>
               <div id="projText${uniqueId}" class="texteProjet">${article.excerpt.rendered}</div>
               <p id="carreBleuText${uniqueId}" class="">${article.content.rendered}</p>
           `;
@@ -98,3 +98,13 @@ function moveDivback(uniqueId) {
   div.classList.toggle("enableBlur");
 }
 
+//Repeat similar changes for other moveDiv functions
+// function moveDiv2back() {
+//   var proj = document.getElementById(`projDiv22`);
+//   var div = document.getElementById("cont-projet");
+
+//   proj.classList.toggle("activ2");
+//   proj.classList.toggle("activ3");
+//   proj.classList.toggle("disableBlur");
+//   div.classList.toggle("enableBlur");
+// }
