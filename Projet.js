@@ -1,109 +1,100 @@
+(function () {
+  // URL de l'API REST de WordPress
+  let url = "http://localhost:8080/5w5/wp-json/wp/v2/posts?categories=28&per_page=30";
+
+  let titre;
+
+  // Effectuer la requête HTTP en utilisant fetch()
+  fetch(url)
+      .then(function (response) {
+          // Vérifier si la réponse est OK (statut HTTP 200)
+          if (!response.ok) {
+              throw new Error("La requête a échoué avec le statut " + response.status);
+          }
+          // Analyser la réponse JSON
+          return response.json();
+      })
+      .then(function (data) {
+          // La variable "data" contient la réponse JSON
+          // console.log("Variable data", data);
+
+          // Maintenant, vous pouvez traiter les données comme vous le souhaitez
+          // Par exemple, extraire les titres des articles comme dans l'exemple précédent
+          data.forEach(function (article) {
+              titre = article.title.rendered;
+              console.log(titre);
+              afficherProjet(data); // Pass the data to the afficherProjet function
+          });
+      })
+      .catch(function (error) {
+          // Gérer les erreurs
+          console.error("Erreur lors de la récupération des données :", error);
+      });
+
+  let divProjets = document.querySelector('.site__projets'); 
+  let counter = 1; // Initialize a counter
+
+  function afficherProjet(data) {
+      // Clear the articleContainer
+      divProjets.innerHTML = '';
+
+      // Loop through the data and create article elements
+      data.forEach(article => {
+          const divProjet1 = document.createElement("div");
+          divProjet1.setAttribute("class", "projet");
+
+          // Use the counter to create unique IDs
+          const uniqueId = `projDiv${counter}`;
+          divProjet1.setAttribute("id", uniqueId);
 
 
-function showText() {
-    var text = document.getElementById("carreBleuText1");
-    text.classList.toggle("show");
-    }
-function showText2() {
-    var text2 = document.getElementById("carreBleuText2");
-    text2.classList.toggle("show");
-    }
-function showText3() {
-    var text3 = document.getElementById("carreBleuText3");
-    text3.classList.toggle("show");
-    }
-function showText4() {
-    var text4 = document.getElementById("carreBleuText4");
-    text4.classList.toggle("show");
-    }
-function showText5() {
-    var text5 = document.getElementById("carreBleuText5");
-    text5.classList.toggle("show");
-    }
+          divProjet1.setAttribute("onclick", `showText('${uniqueId}'), showText1('${uniqueId}'), moveDivback('${uniqueId}')`);
+          divProjet1.className = "article";
+          divProjet1.innerHTML = `
+              <h3 class="titleProjetDroite" id="title${uniqueId}">${article.title.rendered}</h3>
+              <p class="plus">Plus...</p>
+              <div id="projText${uniqueId}" class="texteProjet">${article.excerpt.rendered}</div>
+              <p id="carreBleuText${uniqueId}" class="">${article.content.rendered}</p>
+          `;
+
+          divProjets.appendChild(divProjet1);
+
+          counter++; // Increment the counter for the next iteration
+      });
+  }
+})();
 
 
-    function showText1() {
-        var text = document.getElementById("projText");
-        text.classList.toggle("show1");
 
-        var title = document.getElementById("title1");
-        title.classList.toggle("show1");
-        }
-    function showText12() {
-        var text2 = document.getElementById("projText2");
-        text2.classList.toggle("show1");
-        var title2 = document.getElementById("title2");
-        title2.classList.toggle("show1");
-        }
-    function showText13() {
-        var text3 = document.getElementById("projText3");
-        text3.classList.toggle("show1");
-        var title3 = document.getElementById("title3");
-        title3.classList.toggle("show1");
-        }
-    function showText14() {
-        var text4 = document.getElementById("projText4");
-        text4.classList.toggle("show1");
-        var title4 = document.getElementById("title4");
-        title4.classList.toggle("show1");
-        }
-    function showText15() {
-        var text5 = document.getElementById("projText5");
-        text5.classList.toggle("show1");
-        var title5 = document.getElementById("title5");
-        title5.classList.toggle("show1");
-        }
-    
-    
-    
 
-// activ -> pour les div a translate a droite
-// activ2 -> pour les div a translate a gauche
 
-function moveDiv1back() {
-    var proj1 = document.getElementById("projet1");
-    var div = document.getElementById("cont-projet");
-     
-    proj1.classList.toggle("activ");
-    proj1.classList.toggle("activ3"); 
-    proj1.classList.toggle("disableBlur"); 
-    div.classList.toggle("enableBlur");
+
+
+
+
+
+function showText(uniqueId) {
+  var text = document.getElementById(`carreBleuText${uniqueId}`);
+  text.classList.toggle("show");
 }
 
-function moveDiv2back() {
-    var proj2 = document.getElementById("projet2");
-    var div = document.getElementById("cont-projet");
-    
-    proj2.classList.toggle("activ2"); 
-    proj2.classList.toggle("activ3"); 
-    proj2.classList.toggle("disableBlur"); 
-    div.classList.toggle("enableBlur"); 
-}
-function moveDiv3back() {
-    var proj3 = document.getElementById("projet3");
-    var div = document.getElementById("cont-projet");
-   
-    proj3.classList.toggle("activ"); 
-    proj3.classList.toggle("activ3"); 
-    proj3.classList.toggle("disableBlur"); 
-    div.classList.toggle("enableBlur");
-}
-function moveDiv4back() {
-    var proj4 = document.getElementById("projet4");
-    var div = document.getElementById("cont-projet");
+function showText1(uniqueId) {
+  var text = document.getElementById(`projText${uniqueId}`);
+  text.classList.toggle("show1");
 
-    proj4.classList.toggle("activ2"); 
-    proj4.classList.toggle("activ3"); 
-    proj4.classList.toggle("disableBlur"); 
-    div.classList.toggle("enableBlur"); 
-
+  var title = document.getElementById(`title${uniqueId}`);
+  title.classList.toggle("show1");
 }
-function moveDiv5back() {
-    var proj5 = document.getElementById("projet5");
-    var div = document.getElementById("cont-projet");
 
-    proj5.classList.toggle("activ"); 
-    proj5.classList.toggle("activ3"); 
-    proj5.classList.toggle("disableBlur"); 
-    div.classList.toggle("enableBlur");
+function moveDivback(uniqueId) {
+  var proj = document.getElementById(`${uniqueId}`);
+  var proj2 = document.getElementById(`${uniqueId}`);
+  var div = document.getElementById("cont-projet");
+
+  proj.classList.toggle("activ");
+  proj2.classList.toggle("activ2");
+  proj.classList.toggle("activ3");
+  proj.classList.toggle("disableBlur");
+  div.classList.toggle("enableBlur");
 }
+
