@@ -31,7 +31,7 @@
           console.error("Erreur lors de la récupération des données :", error);
       });
 
-  let divProjets = document.querySelector('.site__projets'); 
+  let divProjets = document.querySelector('.cont-projet'); 
   let counter = 1; // Initialize a counter
 
   function afficherProjet(data) {
@@ -97,14 +97,3 @@ function moveDivback(uniqueId) {
   proj.classList.toggle("disableBlur");
   div.classList.toggle("enableBlur");
 }
-
-//Repeat similar changes for other moveDiv functions
-// function moveDiv2back() {
-//   var proj = document.getElementById(`projDiv22`);
-//   var div = document.getElementById("cont-projet");
-
-//   proj.classList.toggle("activ2");
-//   proj.classList.toggle("activ3");
-//   proj.classList.toggle("disableBlur");
-//   div.classList.toggle("enableBlur");
-// }

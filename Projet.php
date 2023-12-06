@@ -39,17 +39,19 @@ add_action('wp_enqueue_scripts', 'Projet_enqueue');
  
  
 function creation_Projet(){
-    $contenu = '<section class="site__projets" id="site_avec_projets">
-    <h1 class="titleProjets">PROJETS DES ÉLÈVES</h1>
+    $contenu = '
+    
+    <section class="site_projets" id="site_avec_projets">
+        <h1 class="titleProjets">PROJETS DES ÉLÈVES</h1>
+        <div class="cont-proj">
+            <div class="premier-container-projet">
+                <div class="cont-projet"  disbaleZindex" id="cont-projet"></div>
+            </div>
 
-    <div class="cont-proj">
-
-        <div class="premier-container-projet">
-        <div class="cont-projet  disbaleZindex" id="cont-projet">";
-
-      ';
-
-return $contenu;
+        </div>
+    </section>
+    ';
+    return $contenu;
 }
  
 add_shortcode('em_Projet', 'creation_Projet');
