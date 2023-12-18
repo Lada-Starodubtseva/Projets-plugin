@@ -449,13 +449,8 @@
     display: none;
   }
   section.site_projets{
-      display: grid;
-      justify-items: center;
-      align-content: space-around;
       width: 100vw;
-      scale: 1.5;
-      margin-top: 20%;
-      margin-bottom: 40%;
+      margin-bottom: 2wv;
   }
 
 
@@ -494,8 +489,8 @@
   #projDiv21, 
   #projDiv23, 
   #projDiv25 {
-    height: 240px;
-    width: 150px;
+    height: 30vw;
+    width: 20vw;
     background-color: #030027;
     border-radius: 10px;
     transition: 0.4s ease-out;
@@ -512,8 +507,8 @@
 
   #projDiv22, 
   #projDiv24 {
-  	height: 240px;
-    width: 150px;
+  	height: 30vw;
+    width: 20vw;
     background-color: #030027;
     border-radius: 10px;
     transition: 0.4s ease-out;
@@ -623,7 +618,7 @@
     position: relative;
     z-index: 4;
     height: 180px;
-    width: 180px;
+    width: 25vw;
     left: -150%;
     background-color: #030027;
     transition: 1.5s;
@@ -635,7 +630,7 @@
   position: relative;
   z-index: 4;
   height: 150px;
-  width: 250px;
+  width: 25vw;
   right: -130%;
   background-color: #030027;
   transition: 1.5s;
