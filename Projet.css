@@ -637,11 +637,10 @@
   }
 
 #projets-deco-1{
-  height: 500px;
-  bottom: -200px;
-  position: relative;
-  left: -200px;
-  margin-top:-20%;
+ margin-bottom: -15%;
+    position: relative;
+    left: -200px;
+    z-index: 0;
 }
 }
 
