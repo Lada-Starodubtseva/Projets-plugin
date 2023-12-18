@@ -460,6 +460,8 @@
 
     color:#C4E7D4;
     z-index: 2;
+    position: relative;
+    
   }
 
   .activ3{
