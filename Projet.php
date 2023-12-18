@@ -42,7 +42,7 @@ function creation_Projet(){
     $contenu = '
     
     <section class="site_projets" id="site_avec_projets">
-        <h1 class="titleProjets">PROJETS DES ÉLÈVES</h1>
+        <h2 class="titleProjets">PROJETS DES ÉLÈVES</h2>
         <div class="cont-proj">
             <div class="premier-container-projet">
                 <div class="cont-projet"  disbaleZindex" id="cont-projet"></div>
