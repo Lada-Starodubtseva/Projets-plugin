@@ -47,7 +47,7 @@
     align-content: space-around;
   }
 
-  .article {
+ #cont-projet .projet{
     height: 240px;
     width: 150px;
     background-color: #030027;
@@ -56,13 +56,14 @@
     left: 0px;
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
     margin-bottom: 5vh;
+    margin-top: 5vh;
     position: relative;
     display: inline-block;
     cursor: pointer;
 
   }
   
-  .article img{
+ .image-projet{
     top: 0;
     position: absolute;
     height: -webkit-fill-available;
@@ -74,7 +75,7 @@
   /* ******Texte************* */
   /* ************************ */
 
-  div.article p.texte{
+  div.projet p.texte{
     display: none;
   }
 
@@ -110,8 +111,9 @@
     font-family: 'Martian Mono', monospace;
     font-size: 30px;
     color:#C4E7D4;
+    z-index: 2;
   }
-    .article 
+   #cont-projet .projet
     #projTextprojDiv21, 
     #projTextprojDiv23, 
     #projTextprojDiv25 {
@@ -126,7 +128,7 @@
     font-size: 12px;
   }
   
-  .article 
+ #cont-projet .projet
   #projTextprojDiv22, 
   #projTextprojDiv24 {
     visibility: hidden;
@@ -141,7 +143,7 @@
   }
   
 
-  .article 
+ #cont-projet .projet
   #projTextprojDiv21.show1, 
   #projTextprojDiv23.show1, 
   #projTextprojDiv25.show1 {
@@ -150,7 +152,7 @@
       animation: fadeIn 1s;
     }
 
-    .article 
+   #cont-projet .projet
     #projTextprojDiv22.show1, 
     #projTextprojDiv24.show1{
       visibility: visible;
@@ -161,6 +163,7 @@
 
     h1.titleProjets{
       text-align: center;
+      z-index: 2;
     }
 
 
@@ -195,7 +198,12 @@
   }
 
 
-
+  #projets-deco-1{
+    height: 500px;
+    bottom: -200px;
+    position: relative;
+    left: -200px;
+}
   /* ************************ */
   /* **Elements sans display* */
   /* ************************ */
@@ -215,9 +223,9 @@
   .carreBleu2{
     display: none;
   }
+
+
 }
-
-
 
 
 /* ****************** */
@@ -228,16 +236,18 @@
 
 @media (min-width: 701px) and (max-width: 1100px)  {
 
-  div.article p.texte{
+  div.projet p.texte{
     display: none;
   }
+  
   section.site_projets{
     display: grid;
     justify-items: center;
     align-content: space-around;
     width: 100vw;
   }
-  .article img{
+  
+ .image-projet{
     top: 0;
     position: absolute;
     height: -webkit-fill-available;
@@ -246,6 +256,7 @@
 
 
   h1.titleProjets {
+    z-index: 2;
     text-align: center;
     font-family: 'Martian Mono', monospace;
     font-size: 30px;
@@ -276,9 +287,9 @@
   /**************************************/
 
 
-  #projDiv21, 
-  #projDiv23, 
-  #projDiv25 {
+#projDiv21, 
+#projDiv23, 
+#projDiv25 {
     height: 240px;
     width: 150px;
     background-color: #030027;
@@ -286,13 +297,13 @@
     transition: 0.4s ease-out;
     right: 0px;
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
     position: relative;
     display: inline-block;
     margin-right: -45%;
     cursor: pointer;
-
-  }
+}
 
   #projDiv22, 
   #projDiv24 {
@@ -303,7 +314,7 @@
     transition: 0.4s ease-out;
     margin-left: -45%;
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -322,7 +333,7 @@
   /**************************************/
   /**************************************/
 
-  .article
+  .projet
   #projTextprojDiv21, 
   #projTextprojDiv23, 
   #projTextprojDiv25 {
@@ -336,7 +347,7 @@
     left: -150%;
     font-size: 12px;
   }
-  .article 
+ #cont-projet .projet
   #projTextprojDiv22, 
   #projTextprojDiv24{
     width: 120%;
@@ -406,7 +417,7 @@
   #carreBleuTextprojDiv25{
     position: relative;
     z-index: 4;
-    height: 120px;
+    height: 150px;
     width: 180px;
     left: -150%;
     background-color: #030027;
@@ -427,8 +438,15 @@
   top: -6%;
   }
 
+  
+#projets-deco-1{
+  height: 500px;
+  bottom: -200px;
+  position: relative;
+  left: -200px;
 
 
+}
 }
 
 
@@ -440,18 +458,19 @@
 
 @media (min-width: 1101px){
 
-  div.article p.texte{
+  div.projet p.texte{
     display: none;
   }
   section.site_projets{
-    display: grid;
-    justify-items: center;
-    align-content: space-around;
-    width: 100vw;
-    scale: 1.5;
-    margin-top: 40%;
+      display: grid;
+      justify-items: center;
+      align-content: space-around;
+      width: 100vw;
+      scale: 1.5;
+      margin-top: 20%;
+      margin-bottom: 40%;
   }
-  .article img{
+ .image-projet{
     top: 0;
     position: absolute;
     height: -webkit-fill-available;
@@ -464,6 +483,7 @@
     font-family: 'Martian Mono', monospace;
     font-size: 30px;
     color:#C4E7D4;
+    z-index: 2;
   }
 
   .activ3{
@@ -501,6 +521,7 @@
     right: 0px;
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
     margin-bottom: 5vh;
+    margin-top: 5vh;
     position: relative;
     display: inline-block;
     margin-right: -45%;
@@ -517,7 +538,7 @@
     transition: 0.4s ease-out;
     margin-left: -45%;
     box-shadow: 3px 2px 50px rgb(202, 245, 255);
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -536,7 +557,7 @@
   /**************************************/
   /**************************************/
 
-  .article
+  .projet
   #projTextprojDiv21, 
   #projTextprojDiv23, 
   #projTextprojDiv25 {
@@ -550,7 +571,7 @@
     left: -150%;
     font-size: 12px;
   }
-  .article 
+ #cont-projet .projet
   #projTextprojDiv22, 
   #projTextprojDiv24{
     width: 120%;
@@ -620,7 +641,7 @@
   #carreBleuTextprojDiv25{
     position: relative;
     z-index: 4;
-    height: 120px;
+    height: 150px;
     width: 180px;
     left: -150%;
     background-color: #030027;
@@ -632,35 +653,41 @@
   #carreBleuTextprojDiv24{
   position: relative;
   z-index: 4;
-  height: 120px;
+  height: 150px;
   width: 250px;
   right: -130%;
   background-color: #030027;
   transition: 1.5s;
   }
 
-
-
+#projets-deco-1{
+  height: 500px;
+  bottom: -200px;
+  position: relative;
+  left: -200px;
 }
+}
+
+
   
   /* *****projet img************ */
   /* *****Images a changer pour chaque projet************ */
-    #projet1 img, #projet2 img, #projet3 img, #projet4 img, #projet5 img {
-      position: relative;
+  .image-projet{
+
       width: 100%;
       display: flex;
-      top: 20%;
+
     }
 
   
   
     
-    .article:hover {
+    .projet:hover {
       transform: scale(105%);
       transition: 0.4s ease-out;
     }
     
-    .article:hover ~ .article {
+    .projet:hover ~#cont-projet .projet{
       position: relative;
       transition: 0.4s ease-out;
     }
@@ -697,7 +724,7 @@
       }
     }
   
-   .premier-container-projet{
+  .premier-container-projet{
     border: #C4E7D4 2px solid;
     padding: 1%;
     z-index: 5;
@@ -705,14 +732,16 @@
     width: -webkit-fill-available;
     display: grid;
     justify-items: center;
-   }
+  }
 
-    .cont-proj{
+  .cont-proj{
     justify-items: center;
     border: #c4e7d4a6 2px solid;
     padding: 1%;
     margin: 1%;
+    margin-top: 20vh;
     z-index: 5;
     position: relative;
     width: -webkit-fill-available;
+    background-color: #030027;
   }
