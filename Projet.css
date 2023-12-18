@@ -108,11 +108,12 @@
     animation: fadeIn 1s;
   }
 
-  h1.titleProjets {
+  h2.titleProjets {
     font-family: 'Martian Mono', monospace;
     font-size: 30px;
     color:#C4E7D4;
     z-index: 2;
+    position: relative;
   }
    #cont-projet .projet
     #projTextprojDiv21, 
